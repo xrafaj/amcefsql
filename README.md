@@ -13,7 +13,10 @@ with name amcefsql and password 'supersecretpass' and root user is postgres.
 ## Understanding and running the code
 
 You can run whole app within Python 3.9 with standard main, no need for 
-any commands to run the application.
+any commands to run the application. Whole application is within Flask
+folder, where you can run and build app.py. Whole code apart from
+HTML is within app.py (main class included). After running app.py within
+correctly turned on database output should like this:
 
 ### Successfully started code
 ![Successfully started code](https://i.imgur.com/jascNjG.png)

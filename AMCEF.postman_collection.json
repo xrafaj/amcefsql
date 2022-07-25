@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "4abbfbf7-1fe6-4106-8f88-2ae49dc2a95c",
+		"name": "AMCEF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basic post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Ragnar 2",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Random signalization.",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postadd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postadd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid post (userID not int)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "abc",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Something 2",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Random signalization.",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postadd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postadd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid post (userID not in external API)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "11",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Something 2",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Random signalization.",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postadd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postadd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid post (userID negative int)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "-1",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Something 2",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Random signalization.",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postadd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postadd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post 1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postid/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post 99 (external API)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postid/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postid",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Posts by user 1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postbyuser/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postbyuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Posts by user 11 (nonvalid)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "abc",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Ethereum 3",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Random signalization.",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/postbyuser/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"postbyuser",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete post 1 (run post first)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/deletepost/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"deletepost",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change time and body",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "6",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "Ragnarok 7",
+							"type": "default"
+						},
+						{
+							"key": "body",
+							"value": "Random text patched.",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/editpost/58",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"editpost",
+						"58"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

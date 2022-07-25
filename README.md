@@ -77,7 +77,7 @@ and search for desired post with id (marked as idx).
 
 #### ENDPOINT 
 
-/postbyuser/<idx>
+/postbyuser/id
 
 #### BODY (example)
 None
@@ -94,7 +94,7 @@ and search for all desired posts with userId matching the posts
 
 #### ENDPOINT 
 
-/deletepost/<idx>
+/deletepost/id
 
 #### BODY (example)
 None
@@ -112,7 +112,7 @@ it will still return a success. However there is nothing you can really do.
 
 #### ENDPOINT 
 
-/editpost/<idx>
+/editpost/id
 
 #### BODY (example)
 {\

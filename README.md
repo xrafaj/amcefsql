@@ -61,7 +61,7 @@ Endpoint offering possibility to create / post new posts to the database.
 
 #### ENDPOINT 
 
-/postid/<idx>
+/postid/idx
 
 #### BODY (example)
 None
@@ -77,7 +77,7 @@ and search for desired post with id (marked as idx).
 
 #### ENDPOINT 
 
-/postbyuser/id
+/postbyuser/idx
 
 #### BODY (example)
 None
@@ -94,7 +94,7 @@ and search for all desired posts with userId matching the posts
 
 #### ENDPOINT 
 
-/deletepost/id
+/deletepost/idx
 
 #### BODY (example)
 None
@@ -112,7 +112,7 @@ it will still return a success. However there is nothing you can really do.
 
 #### ENDPOINT 
 
-/editpost/id
+/editpost/idx
 
 #### BODY (example)
 {\
